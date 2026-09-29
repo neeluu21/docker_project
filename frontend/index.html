@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOpsPulse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">☁</span> DevOps<span>Pulse</span></div>
+    <nav>
+      <a class="active">⌂ <span>Overview</span></a>
+      <a>◈ <span>Services</span></a>
+      <a>🚀 <span>Deployments</span></a>
+      <a>▣ <span>Servers</span></a>
+      <a>⌁ <span>Monitoring</span></a>
+      <a>▤ <span>Logs</span></a>
+      <a>⚙ <span>Settings</span></a>
+    </nav>
+    <div class="online"><b><i></i> System Online</b><small>Last updated just now</small></div>
+  </aside>
+
+  <main>
+    <header>
+      <div class="search">⌕ <input placeholder="Search services, servers, logs..."></div>
+      <div class="profile">🔔 <strong>NS</strong> Neel Solanki ▾</div>
+    </header>
+
+    <section class="content">
+      <h1>Good morning, Neel 👋</h1>
+      <p class="subtitle">Here's your infrastructure overview</p>
+
+      <div class="cards">
+        <div class="card blue"><small>Total Services</small><strong id="total">--</strong><em>↑ 2 new this week</em></div>
+        <div class="card green"><small>Healthy Services</small><strong id="healthy">--</strong><em id="healthyText">Checking...</em></div>
+        <div class="card purple"><small>Uptime</small><strong>98.7%</strong><em>↑ 0.5% vs last 7 days</em></div>
+      </div>
+
+      <div class="grid">
+        <section class="panel chart-panel">
+          <div class="panel-title"><h2>CPU Usage</h2><div class="range"><b>1H</b><b>6H</b><b class="selected">24H</b><b>7D</b></div></div>
+          <div class="chart"><div class="line l1"></div><div class="line l2"></div><div class="line l3"></div></div>
+          <div class="legend"><span>● CPU <b>42%</b></span><span>● Memory <b>68%</b></span><span>● Disk <b>23%</b></span></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title"><h2>System Status</h2><span>⌁</span></div>
+          <div id="statusList"></div>
+        </section>
+      </div>
+
+      <section class="panel deployments">
+        <div class="panel-title"><h2>🚀 Recent Deployments</h2><button>View All →</button></div>
+        <div class="table">
+          <div class="thead"><span>Service</span><span>Version</span><span>Environment</span><span>Status</span><span>Deployed At</span></div>
+          <div class="row"><span>🌐 frontend</span><span>v2.4.1</span><span class="tag prod">Production</span><span class="success">● Success</span><span>30 Sep 2026, 18:45</span></div>
+          <div class="row"><span>▣ backend</span><span>v1.8.3</span><span class="tag prod">Production</span><span class="success">● Success</span><span>30 Sep 2026, 18:32</span></div>
+          <div class="row"><span>◉ api</span><span>v1.7.0</span><span class="tag stage">Staging</span><span class="running">◌ Running</span><span>30 Sep 2026, 17:20</span></div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
